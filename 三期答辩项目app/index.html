@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<link rel="shortcut icon" type="text/css" href="images/icon_logo.png"/>
+		<title>【锤子科技官网】坚果手机-坚果R1手机-坚果3手机</title>
+		<!--响应式-->
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<!--swiper样式-->
+		<link rel="stylesheet" type="text/css" href="swiper-4.2.6/dist/css/swiper.min.css"/>
+		<!--bootstrap样式-->
+		<link rel="stylesheet" href="bootstrap-3.3.4-dist/css/bootstrap.min.css" />
+		<!--style样式-->
+		<link rel="stylesheet" href="css/style.css" />
+	</head>
+	<body class="index">
+		<!--
+        	作者：1144905960@qq.com
+        	时间：2018-06-20
+        	描述：顶部header
+        -->
+		<header class="clearfix">
+			<div class="header-left">
+				<a href="category.html"><span class="glyphicon glyphicon-menu-hamburger"></span></a>
+			</div>
+			<logo>
+				<a href="#">
+					<img src="images/header-logo.png"/>
+				</a>
+			</logo>
+			<div class="header-right">
+				<a href="#"><span class="glyphicon glyphicon-search"></span></a>
+			</div>
+		</header>
+		<!--
+        	作者：1144905960@qq.com
+        	时间：2018-06-20
+        	描述：底部导航
+        -->		
+		<nav class="clearfix">
+			<ul>
+				<li class="ative">
+					<a href="index.html">
+						<span class="glyphicon glyphicon-home"></span>
+						<h4>首页</h4>
+					</a>
+				</li>
+				<li>
+					<a href="category.html">
+						<span class="glyphicon glyphicon-th-list"></span>
+						<h4>分类</h4>
+					</a>
+				</li>
+				<li>
+					<a href="cart.html">
+						<span class="glyphicon glyphicon-shopping-cart"></span>
+						<h4>购物车</h4>
+					</a>
+				</li>
+				<li>
+					<a href="user.html">
+						<span class="glyphicon glyphicon-user"></span>
+						<h4>个人中心</h4>
+					</a>
+				</li>
+			</ul>
+		</nav>
+		<!--
+        	作者：1144905960@qq.com
+        	时间：2018-06-20
+        	描述：返回顶部
+        -->
+        <div id="btn1">
+			<img src="images/top.jpg"/>
+		</div>
+		<!--
+        	作者：1144905960@qq.com
+        	时间：2018-06-21
+        	描述：轮播图样式
+        -->
+		<div class="banner">
+			<div class="swiper-container">
+			    <div class="swiper-wrapper">
+			    	<div class="swiper-slide"><a href="#"><img src="images/banner_01.png" alt="" /></a></div>
+			    	<div class="swiper-slide"><a href="#"><img src="images/banner_02.png" alt="" /></a></div>
+			    </div>
+			    <div class="swiper-pagination"></div>
+			</div>
+			<ul class="clearfix">
+				<li>
+					<a href="#">
+						<img src="images/banner_li_01.png" alt="" />
+						<p>手机</p>
+					</a>
+				</li>
+				<li>
+					<a href="#">
+						<img src="images/banner_li_02.png" alt="" />
+						<p>数码办公</p>
+					</a>
+				</li>
+				<li>
+					<a href="#">
+						<img src="images/banner_li_03.png" alt="" />
+						<p>空气净化</p>
+					</a>
+				</li>
+				<li>
+					<a href="#">
+						<img src="images/banner_li_04.png" alt="" />
+						<p>官方配件</p>
+					</a>
+				</li>
+				<li>
+					<a href="#">
+						<img src="images/banner_li_05.png" alt="" />
+						<p>品牌周边</p>
+					</a>
+				</li>
+			</ul>
+		</div>
+		<!--
+        	作者：1144905960@qq.com
+        	时间：2018-06-21
+        	描述：热销商品
+      -->
+		<div class="section">
+			<div class="section-top">
+				<a href="#" class="clearfix">
+					<h4>热销商品</h4>
+					<span class="glyphicon glyphicon-chevron-right"></span>
+				</a>
+			</div>
+			<div class="section-bottom">
+				<ul class="clearfix rexiao">
+					<li v-for="rexiao in rexiaos">
+						<a href="#">
+							<img v-bind:src="rexiao.img" alt="" />
+							<h4>{{rexiao.text1}}</h4>
+							<p>{{rexiao.text2}}</p>
+							<p>{{rexiao.text3}}</p>
+						</a>
+					</li>
+				</ul>
+			</div>
+		</div>
+		<!--
+        	作者：1144905960@qq.com
+        	时间：2018-06-22
+        	描述：为你推荐
+        -->
+		<div class="box-products-items">
+			<h3>为你推荐</h3>
+			<div class="tuijian clearfix">
+				<div v-for="tuijian in tuijians">
+					<a href="#">
+						<img v-bind:src="tuijian.img" alt="" />
+						<h4>{{tuijian.text1}}</h4>
+						<p>{{tuijian.text2}}</p>
+						<p>{{tuijian.text3}}</p>
+					</a>
+				</div>
+			</div>
+		</div>
+		<!--
+        	作者：1144905960@qq.com
+        	时间：2018-06-25
+        	描述：抽奖
+        -->
+        <div class="choujiang">
+        	<div class="content">
+        		<div class="guanbi">X</div>
+		        <div class="wheel">
+		            <canvas class="item" id="wheelCanvas" width="422px" height="422px"></canvas>
+		            <img class="pointer" src="images/wheel-pointer.png"/>
+		        </div>
+		    </div>
+		    <div class="tips" >
+		        <span id="tip">抽奖</span>
+		    </div>
+        </div>
+		<!--JQ插件-->
+		<script src="js/jquery-1.11.1.min.js"></script>
+		<script src="js/jQueryRotate.js"></script>
+		<!--Swiper-->
+		<script src="swiper-4.2.6/dist/js/swiper.min.js"></script>
+		<!--bootstorp-->
+		<script src="bootstrap-3.3.4-dist/js/bootstrap.min.js"></script>
+		<!--Vue.js-->
+		<script src="js/vue.js"></script>
+		<!--js样式-->
+		<script src="js/style.js"></script>
+	</body>
+</html>

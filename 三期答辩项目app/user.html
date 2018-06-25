@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<link rel="shortcut icon" type="text/css" href="images/icon_logo.png"/>
+		<title>【锤子科技官网】坚果手机-坚果R1手机-坚果3手机</title>
+		<!--响应式-->
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<!--swiper样式-->
+		<link rel="stylesheet" type="text/css" href="swiper-4.2.6/dist/css/swiper.min.css"/>
+		<!--bootstrap样式-->
+		<link rel="stylesheet" href="bootstrap-3.3.4-dist/css/bootstrap.min.css" />
+		<!--style样式-->
+		<link rel="stylesheet" href="css/style.css" />
+	</head>
+	<body class="user">
+		<!--
+        	作者：1144905960@qq.com
+        	时间：2018-06-20
+        	描述：顶部header
+        -->
+		<header class="clearfix">
+			<div class="header-left">
+				<a href="category.html"><span class="glyphicon glyphicon-menu-hamburger"></span></a>
+			</div>
+			<logo>
+				<a href="#">
+					<img src="images/header-logo.png"/>
+				</a>
+			</logo>
+			<div class="header-right">
+				<a href="#"><span class="glyphicon glyphicon-search"></span></a>
+			</div>
+		</header>
+		<!--
+        	作者：1144905960@qq.com
+        	时间：2018-06-20
+        	描述：底部导航
+        -->		
+		<nav class="clearfix">
+			<ul>
+				<li>
+					<a href="index.html">
+						<span class="glyphicon glyphicon-home"></span>
+						<h4>首页</h4>
+					</a>
+				</li>
+				<li>
+					<a href="category.html">
+						<span class="glyphicon glyphicon-th-list"></span>
+						<h4>分类</h4>
+					</a>
+				</li>
+				<li>
+					<a href="cart.html">
+						<span class="glyphicon glyphicon-shopping-cart"></span>
+						<h4>购物车</h4>
+					</a>
+				</li>
+				<li class="ative">
+					<a href="user.html">
+						<span class="glyphicon glyphicon-user"></span>
+						<h4>个人中心</h4>
+					</a>
+				</li>
+			</ul>
+		</nav>
+		<!--
+        	作者：1144905960@qq.com
+        	时间：2018-06-20
+        	描述：返回顶部
+        -->
+        <div id="btn1">
+			<img src="images/top.jpg"/>
+		</div>
+		<!--
+        	作者：1144905960@qq.com
+        	时间：2018-06-25
+        	描述：个人中心
+        -->
+		<div class="login">
+			<form action="index.html" onsubmit="return checkForm()">
+				<div class="input3">
+					<input type="tel" pattern="[0-9]{11}" required name="tel" placeholder="手机号">
+					<input type="text" name="password" id="pw" required placeholder="密码">
+				</div>
+				<div class="clearfix input1">
+					<p><img src="images/input_01.png" alt="" />自动登陆</p>
+					<a href="#">忘记密码</a><a href="#">注册</a>
+				</div>
+				<div class="input2">
+					<input class="input-last" type="submit" value="登陆">
+				</div>
+			</form>
+		</div>
+		<!--
+        	作者：1144905960@qq.com
+        	时间：2018-06-22
+        	描述：为你推荐
+        -->
+		<div class="box-products-items">
+			<h3>为你推荐</h3>
+			<div class="tuijian clearfix">
+				<div v-for="tuijian in tuijians">
+					<a href="#">
+						<img v-bind:src="tuijian.img" alt="" />
+						<h4>{{tuijian.text1}}</h4>
+						<p>{{tuijian.text2}}</p>
+						<p>{{tuijian.text3}}</p>
+					</a>
+				</div>
+			</div>
+		</div>
+		<!--JQ插件-->
+		<script src="js/jquery-1.11.1.min.js"></script>
+		<!--Swiper-->
+		<script src="swiper-4.2.6/dist/js/swiper.min.js"></script>
+		<!--bootstorp-->
+		<script src="bootstrap-3.3.4-dist/js/bootstrap.min.js"></script>
+		<!--Vue.js-->
+		<script src="js/vue.js"></script>
+		<!--js样式-->
+		<script src="js/style.js"></script>
+	</body>
+</html>
