@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>Home</title>
+		<!--响应式-->
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<!--bootstrap样式-->
+		<link rel="stylesheet" href="bootstrap-3.3.4-dist/css/bootstrap.min.css" />
+		<!---字体图标--->
+		<link rel="stylesheet" href="font-awesome-4.7.0/css/font-awesome.min.css"stylesheet" href="css/style.css" />
+		<!---style样式--->
+		<link rel="stylesheet" type="text/css" href="css/style.css"/>
+	</head>
+	<body class="gallery">
+		<!--
+        	作者：1144905960@qq.com
+        	时间：2018-06-26
+        	描述：header
+        -->
+		<header>
+			<div class="container">
+				<nav class="navbar navbar-default">
+					<div class="container-fluid">
+					    <div class="navbar-header">
+					      	<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+					        	<span class="sr-only">Toggle navigation</span>
+					        	<span class="icon-bar"></span>
+					       		<span class="icon-bar"></span>
+					      		<span class="icon-bar"></span>
+					      	</button>
+					      	<a class="navbar-brand" href="#"><img src="images/logo.png"/></a>
+					    </div>
+					    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+						    <ul class="nav navbar-nav navbar-right">
+						        <li><a href="index.html">HOME</a></li>
+						        <li><a href="about.html">ABOUT</a></li>
+						        <li class="bian"><a href="gallery.html">GALLERY</a></li>
+						    </ul>
+					    </div>
+					</div>
+				</nav>
+			</div>
+		</header>
+		<!--
+        	作者：1144905960@qq.com
+        	时间：2018-06-26
+        	描述：返回顶部
+        -->
+		<div id="btn1">
+			<img src="images/up-arrow.png"/>
+		</div>
+		<!--
+        	作者：1144905960@qq.com
+        	时间：2018-06-28
+        	描述：主体内容
+        -->
+		<div class="portfolio">
+			<div class="container">
+				<div class="portfolio-top">
+					<h1>GALLERY</h1>
+					<ul class="clearfix">
+						<li>ALL</li>
+						<li>FEMININE</li>
+						<li>MODERN</li>
+						<li>TRENDY</li>
+						<li>UNUSAL</li>
+					</ul>
+				</div>
+				<div class="portfolio-bottom">
+					<div class="row tupian">
+						<div class="col-md-3 col-md-6 shan" v-for="tupian in tupians">
+							<div>
+								<img v-bind:src="tupian.img" alt="" />
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		
+		
+		
+		
+		
+		
+		<!--
+        	作者：1144905960@qq.com
+        	时间：2018-06-26
+        	描述：footer
+        -->
+        <footer>
+        	<div class="footer-top">
+        		<div class="container">
+	        		<ul class="clearfix">
+	        			<li><a href="index.html">Home</a></li>
+	        			<li><a href="about.html">About</a></li>
+	        			<li><a href="gallery.html">Gallery</a></li>
+	        		</ul>
+	        	</div>
+	        </div>
+        	<div class="footer-middle">
+        		<div class="container">
+        			<div class="row">
+        				<div class="col-md-4 col-xs-12 footer-left">
+        					<img src="images/logo.png"/>
+        				</div>
+        				<div class="col-md-4 col-xs-12 footer-center">
+        					<div class="row">
+        						<div class="col-md-6 col-xs-6">
+        							<h4>Richmond</h4>
+        							<h5>345 Setwant natrer,</h5>
+        							<h5>Richmond,</h5>
+        							<h5>United States.</h5>
+        							<h5>+1(401) 1234 567.</h5>
+        						</div>
+        						<div class="col-md-6 col-xs-6">
+        							<h4>New york</h4>
+        							<h5>flat no:42/16,</h5>
+        							<h5>GM Road,Khulna</h5>
+        							<h5>New york</h5>
+        							<h5>+880 1918 691 601</h5>
+        						</div>
+        					</div>
+        				</div>
+        				<div class="col-md-4 col-xs-12 footer-right">
+        					<div class="input">
+        						<form action="index.html" onsubmit="return checkForm()">
+        							<input type="email" required  name="email" placeholder="YOUR EMAIL">
+        							<input class="input-last" type="submit" value="Sign Up">
+        						</form>
+        					</div>
+        					<div class="font">
+        						<a href="#"><i class="fa fa-google-plus" aria-hidden="true"></i></a>
+								<a href="#"><i class="fa fa-twitter" aria-hidden="true"></i></a>
+								<a href="#"><i class="fa fa-linkedin" aria-hidden="true"></i></a>
+								<a href="#"><i class="fa fa-vimeo" aria-hidden="true"></i></a>
+								<a href="#"><i class="fa fa-dribbble" aria-hidden="true"></i></a>
+
+        					</div>
+        				</div>
+        			</div>
+        		</div>
+        	</div>
+        	<div class="footer-bottom">
+        		<div class="container">
+        			<p>Copyright &copy; 2016.Company name All rights reserved.More Templates - Collect from</p>
+        		</div>
+        	</div>
+        </footer>
+		<!--JQ插件-->
+		<script src="js/jquery-1.11.1.min.js"></script>
+		<!--bootstorp-->
+		<script src="bootstrap-3.3.4-dist/js/bootstrap.min.js"></script>
+		<!---Vue--->
+		<script src="js/vue.js"></script>
+		<!--js样式-->
+		<script src="js/style.js"></script>
+	</body>
+</html>
