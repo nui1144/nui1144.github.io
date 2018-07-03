@@ -482,3 +482,8 @@ nav ul li a h4{
 	border-radius: 7px;
 	
 }
+@media only screen and (min-width: 500px){
+    .index .choujiang{
+        display: none;
+    }
+}

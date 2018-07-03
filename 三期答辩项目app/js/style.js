@@ -78,9 +78,7 @@ if(ind != null){
 	//关闭
 	var guanbi=document.querySelector(".index .guanbi");
 	var choujiang=document.querySelector(".index .choujiang");
-    if(sessionStorage.name != "about"){
-        choujiang.style.display="block";
-    }else{
+    if(sessionStorage.name == "about"){
         choujiang.style.display="none";
     }
 	guanbi.onclick=function(){
