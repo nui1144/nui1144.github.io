@@ -78,8 +78,14 @@ if(ind != null){
 	//关闭
 	var guanbi=document.querySelector(".index .guanbi");
 	var choujiang=document.querySelector(".index .choujiang");
+    if(sessionStorage.name != "about"){
+        choujiang.style.display="block";
+    }else{
+        choujiang.style.display="none";
+    }
 	guanbi.onclick=function(){
-		choujiang.style.display="none";
+        choujiang.style.display="none";
+        sessionStorage.name = "about";
 	}
 	// 判断是不是移动设备
 	var isMobile = {
