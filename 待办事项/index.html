@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>Document</title>
+		<style>
+			*{
+				margin: 0;
+				padding: 0;
+				box-sizing: border-box;
+			}
+			.clearfix:after{
+			    content: "";
+			    display: table;
+			    clear: both;
+			}
+			.con{
+				text-align: center;
+				padding-top: 50px;
+				width: 50%;
+				margin: auto;
+			}
+			#app h3{
+				text-align: center;
+				display: inline-block;
+				margin: 20px;
+				border-bottom: 1px solid black;
+			}
+			#app .tianjia{
+				border: 1px solid #ccc;
+				display: inline-block;
+			}
+			#app .tianjia input{
+				outline: none;
+				padding: 7px 3px;
+				border: none;
+			}
+			#app .tianjia button{
+				background: #2196f3;
+				color: #fff;
+				padding: 7px 10px;
+				border: none;
+			}
+			#app .shuju{
+				width: 44%;
+				margin: auto;
+				margin-top: 10px;
+				border: 1px solid #ccc;
+			}
+			#app .shuju>div{
+				padding: 10px;
+				border-bottom: 1px solid #ccc;
+			}
+			#app .shuju span{
+				float: left;
+			}
+			#app .shuju button{
+				float: right;
+			}
+		</style>
+	</head>
+	<body>
+		<div class="con">
+			<div id="app">
+				<p><h3>待办事项</h3></p>
+				<div class="tianjia">
+					<input @keyup.enter="fun" type="text" placeholder="接下来要做什么" v-model="message" />
+					<button @click="fun">添加</button>
+				</div>
+				<div class="shuju">
+					<div v-for="(arr,index) in arrs" class="clearfix">
+						<span>{{arr}}</span>
+						<button @click="fun1(index)">删除</button>
+					</div>
+				</div>
+			</div>
+		</div>
+		
+		
+		<script src="https://cdn.bootcss.com/vue/2.5.16/vue.js"></script>
+		<script src="js/script.js"></script>
+	</body>
+</html>
