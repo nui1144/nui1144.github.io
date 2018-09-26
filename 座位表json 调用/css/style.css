@@ -1,0 +1,96 @@
+*{
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+.clearfix:after{
+    content: "";
+    display: table;
+    clear: both;
+}
+.logo{
+	padding-top: 20px;
+	text-align: center;
+}
+.logo i{
+	border-radius: 50%;
+	padding: 20px;
+	border: 5px #e5e5e5 solid;
+	font-size: 50px;
+}
+.logo p{
+	color: #4183c4;
+	font-size: 24px;
+	font-weight: 800;
+	padding-top: 10px;
+}
+.tishi{
+	cursor:pointer;
+}
+.tishi i{
+	transition: 1s;
+	transform: rotateZ(-90deg);
+}
+.yincang{
+	height: 0px;
+	overflow: hidden;
+	transition: 1s;
+}
+header{
+	padding-bottom: 20px;
+}
+.main{
+	text-align: center;
+}
+.main .xian,footer .xian{
+	width: 100%;
+	height: 20px;
+	border-bottom: 1px solid #dddede;
+}
+.main .zuowei,footer .jiangtai{
+	text-align: center;
+	background: #fff;
+	width: 5%;
+	font-weight: 800;
+	margin: auto;
+	margin-top: -10px;
+}.main .row{
+	padding-top: 10px;
+}
+.main .row .col-md-3{
+	text-align: left;
+}
+.shuju>div>div{
+	float: left;
+}
+.shuju>div{
+	padding: 10px;
+	box-shadow: 0 1px 3px rgba(0,0,0,.8);
+	margin: 15px 3px;
+	border-radius: 5px;
+}
+.shuju>div>div{
+	margin: 3px;
+}
+.shuju>div>div:nth-of-type(2)>div{
+	background: #e8e8e8;
+	padding: 0px 10px;
+	border-radius: 3px;
+}
+.shuju>div>div:nth-of-type(2){
+	text-align: center;
+}
+.main{
+	padding-bottom: 50px;
+}
+footer{
+	padding-bottom: 20px;
+}
+.bianse{
+	background: #2185d0;
+	color: #fff;
+}
+.bianses{
+	background: #fff !important;
+	color: #2185d0;
+}

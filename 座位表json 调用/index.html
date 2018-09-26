@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title></title>
+		<link href="https://cdn.bootcss.com/bootstrap/4.1.1/css/bootstrap.min.css" rel="stylesheet">
+		<link rel="stylesheet" type="text/css" href="css/style.css"/>
+		<link rel="stylesheet" type="text/css" href="font-awesome-4.7.0/css/font-awesome.min.css"/>
+	</head>
+	<body class="index">
+		<div class="logo">
+			<i class="fa fa-users"></i>
+			<p>座位表</p>
+		</div>
+		<div class="container">
+			<header>
+				<div class="tishi">
+					<i class="fa fa-caret-down"></i>使用提示
+				</div>
+				<div class="yincang">
+					点击学员信息可以来回切换选中效果；
+				</div>
+			</header>
+			<div class="main">
+				<div class="xian"></div>
+				<div class="zuowei">座位</div>
+				<div class="row" id="shujus">
+					<div class="col-md-3" v-for="(arr,index) in arrs">
+						<p>{{index+1}}组</p>
+						<div class="shuju" v-for="(ar,index1) in arr" @click="fun(index,index1)">
+							<div class="clearfix" :class="{bianse:arrs[index][index1].bool}">
+								<div>
+									<img src="img/tou.jpg" alt="" />
+								</div>
+								<div>
+									<div :class="{bianses:arrs[index][index1].bool}">
+										<i class="fa fa-desktop"></i>
+										<span>{{ar.zuoweihao}}</span>
+									</div>
+									<p>{{ar.zhiwei}}</p>
+								</div>
+								<div>
+									<p>{{ar.xingming}}</p>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<footer>
+				<div class="xian"></div>
+				<div class="jiangtai">讲台</div>
+			</footer>
+		</div>
+		
+		
+		
+		
+		<script src="https://cdn.bootcss.com/jquery/3.3.1/jquery.min.js"></script>
+		<script src="https://cdn.bootcss.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>
+		<script src="https://cdn.bootcss.com/vue/2.5.16/vue.js"></script>
+		<script src="https://cdn.bootcss.com/vue-resource/1.5.1/vue-resource.js"></script>
+		<script src="js/style.js"></script>
+	</body>
+</html>
