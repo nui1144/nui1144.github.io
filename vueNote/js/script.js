@@ -25,7 +25,7 @@ var datas = new Vue({
 			this.neirong.unshift({
 				name:this.biji,
 				biao:this.biaoti,
-				time:new Date().getFullYear()+"年"+new Date().getMonth()+"月"+new Date().getDate()+"日  星期"+new Date().getDay()+"  "+new Date().getHours()+":"+new Date().getMinutes()+":"+new Date().getSeconds()
+				time:new Date().getFullYear()+"年"+Number(new Date().getMonth()+1)+"月"+new Date().getDate()+"日  星期"+new Date().getDay()+"  "+new Date().getHours()+":"+new Date().getMinutes()+":"+new Date().getSeconds()
 			});
 			this.biji="";
 			this.biaoti="新建笔记";
@@ -42,7 +42,7 @@ var datas = new Vue({
 		},
 		//内容修改键盘事件
 		fun2:function(b){
-			this.neirong[b].xiugai="上次修改日期："+new Date().getFullYear()+"年"+new Date().getMonth()+"月"+new Date().getDate()+"日  星期"+new Date().getDay()+"  "+new Date().getHours()+":"+new Date().getMinutes()+":"+new Date().getSeconds();
+			this.neirong[b].xiugai="上次修改日期："+new Date().getFullYear()+"年"+Number(new Date().getMonth()+1)+"月"+new Date().getDate()+"日  星期"+new Date().getDay()+"  "+new Date().getHours()+":"+new Date().getMinutes()+":"+new Date().getSeconds();
 			//本地存储
 			localStorage.setItem('notes', JSON.stringify(datas.neirong));
 		}
@@ -57,7 +57,7 @@ var datas = new Vue({
 })
 //获取当前的事实时间
 var shi=document.querySelector(".shi");
-shi.innerHTML=new Date().getFullYear()+"年"+new Date().getMonth()+"月"+new Date().getDate()+"日  星期"+new Date().getDay()+"  "+new Date().getHours()+":"+new Date().getMinutes()+":"+new Date().getSeconds();
+shi.innerHTML=new Date().getFullYear()+"年"+Number(new Date().getMonth()+1)+"月"+new Date().getDate()+"日  星期"+new Date().getDay()+"  "+new Date().getHours()+":"+new Date().getMinutes()+":"+new Date().getSeconds();
 setInterval(function(){
-	shi.innerHTML=new Date().getFullYear()+"年"+new Date().getMonth()+"月"+new Date().getDate()+"日  星期"+new Date().getDay()+"  "+new Date().getHours()+":"+new Date().getMinutes()+":"+new Date().getSeconds();
+	shi.innerHTML=new Date().getFullYear()+"年"+Number(new Date().getMonth()+1)+"月"+new Date().getDate()+"日  星期"+new Date().getDay()+"  "+new Date().getHours()+":"+new Date().getMinutes()+":"+new Date().getSeconds();
 },100)
