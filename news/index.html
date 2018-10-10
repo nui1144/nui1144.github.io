@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title>泊职新闻网</title>
+		<link href="https://cdn.bootcss.com/bootstrap/4.1.1/css/bootstrap.min.css" rel="stylesheet">
+		<link rel="stylesheet" href="css/style.css" />
+	</head>
+	<body class="news">
+		<div id="app">
+			<div class="container">
+				<div class="imgs">
+					<img src="img/header.jpg"/>
+					<img src="img/main.jpg" alt="" />
+				</div>
+				<button @click="fun8" class="houtai">后台管理</button>
+				<div class="manage" id="manage" :class="{password:mima}">
+					管理员密码：
+					<input type="password" v-model="mimas" @keyup.enter="fun9"/>
+					<p style="display: none;">密码为：“binshao666”</p>
+					<button @click="fun9">登录</button>
+				</div>
+				<div class="row xinwen">
+					<div class="col-md-12">
+					    <div class="thumbnail">
+						    <div class="caption">
+							    <h3>国际</h3>
+							    <ul>
+							    	<li v-for="guoji in international" :class="{zhuangtai:guoji.fettle}">{{guoji.matter}}</li>
+							    </ul>
+						    </div>
+					    </div>
+					</div>
+					<div class="col-md-12">
+					    <div class="thumbnail">
+						    <div class="caption">
+							    <h3>军事</h3>
+							    <ul>
+							    	<li v-for="junshi in militaryScience" :class="{zhuangtai:junshi.fettle}">{{junshi.matter}}</li>
+							    </ul>
+						    </div>
+					    </div>
+					</div>
+					<div class="col-md-12">
+					    <div class="thumbnail">
+						    <div class="caption">
+							    <h3>社会</h3>
+							    <ul>
+							    	<li v-for="shehui in society" :class="{zhuangtai:shehui.fettle}">{{shehui.matter}}</li>
+							    </ul>
+						    </div>
+					    </div>
+					</div>
+				</div>
+			</div>
+		</div>
+		
+		
+		<script src="https://cdn.bootcss.com/jquery/3.3.1/jquery.min.js"></script>
+		<script src="https://cdn.bootcss.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>
+		<script src="https://cdn.bootcss.com/vue/2.5.16/vue.js"></script>
+		<script src="js/script.js"></script>
+	</body>
+</html>

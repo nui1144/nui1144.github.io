@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>后台管理页面</title>
+		<link href="https://cdn.bootcss.com/bootstrap/4.1.1/css/bootstrap.min.css" rel="stylesheet">
+		<link rel="stylesheet" type="text/css" href="css/style.css"/>
+	</head>
+	<body class="admin">
+		<div id="app">
+			<div class="container">
+				<div class="add">
+					<div class="addTitle clearfix">添加文章<button class="float-right" @click="fun1">X</button></div>
+					<div class="addText">
+						<div>
+							文章标签：
+							<input type="text" v-model="biaoti" />
+							<p style="color: red;">标签为"国际","军事","社会"</p>
+						</div>
+						<div>
+							作者：
+							<input type="text" v-model="zuozhe" />
+						</div>
+						<div class="text">
+							<p>文章内容：</p>
+							<textarea name="" id="" cols="40" rows="7" v-model="text"></textarea>
+						</div>
+						<div class="addBtn clearfix">
+							<button class="btn btn-primary float-right" role="button" @click="fun2">添加</button>
+						</div>
+					</div>
+				</div>
+				<div class="ads">
+					<div class="addTitle clearfix">添加文章<button class="float-right" @click="fun1">X</button></div>
+					<div class="addText">
+						<div>
+							文章标签：
+							<input type="text" v-model="biaoti" />
+							<p style="color: red;">标签为"国际","军事","社会"</p>
+						</div>
+						<div>
+							作者：
+							<input type="text" v-model="zuozhe" />
+						</div>
+						<div class="text">
+							<p>文章内容：</p>
+							<textarea name="" id="" cols="40" rows="7" v-model="text"></textarea>
+						</div>
+						<div class="addBtn clearfix">
+							<button class="btn btn-primary float-right" role="button" @click="fun12">确认更改</button>
+						</div>
+					</div>
+				</div>
+				<div class="clue">
+					<p style="color: red;">确认删除?（不可逆）</p>
+					<div class="clearfix">
+						<button class="float-right" @click="abolish">取消</button>
+						<button class="float-right" @click="trash">确认删除</button>
+					</div>
+				</div>
+				<div class="metter">
+					<img class="bbg" src="img/bg.png" alt="" />
+					<div>
+						<button @click="home" class="qiantai">前台页面</button>
+					</div>
+					<button class="btn btn-primary" role="button" class="tian" @click="fun">添加</button>
+					<div>
+						<h3>国际</h3>
+						<ul>
+							<li v-for="(guoji,index) in international" class="clearfix">
+								<p class="float-left">{{guoji.matter}}</p>
+								<button class="float-right shan" @click="fun3(index)">删除</button>
+								<button class="float-right bianji" @click="fun11(index)">编辑</button>
+								<button class="float-right bu" @click="fun6(index)">发布</button>
+								<span class="float-right fabu" :class="{zhuangtai:guoji.fettle}">{{guoji.release}}</span>
+								<div class="float-right zuozhe">作者：{{guoji.name}}</div>
+							</li>
+						</ul>
+					</div>
+					<div>
+						<h3>军事</h3>
+						<ul>
+							<li v-for="(junshi,index) in militaryScience" class="clearfix">
+								<p class="float-left">{{junshi.matter}}</p>
+								<button class="float-right shan" @click="fun4(index)">删除</button>
+								<button class="float-right bianji" @click="fun13(index)">编辑</button>
+								<button class="float-right bu" @click="fun7(index)">发布</button>
+								<span class="float-right fabu" :class="{zhuangtai:junshi.fettle}">{{junshi.release}}</span>
+								<div class="float-right zuozhe">作者：{{junshi.name}}</div>
+							</li>
+						</ul>
+					</div>
+					<div>
+						<h3>社会</h3>
+						<ul>
+							<li v-for="(shehui,index) in society" class="clearfix">
+								<p class="float-left">{{shehui.matter}}</p>
+								<button class="float-right shan" @click="fun5(index)">删除</button>
+								<button class="float-right bianji" @click="fun14(index)">编辑</button>
+								<button class="float-right bu" @click="fun10(index)">发布</button>
+								<span class="float-right fabu" :class="{zhuangtai:shehui.fettle}">{{shehui.release}}</span>
+								<div class="float-right zuozhe">作者：{{shehui.name}}</div>
+							</li>
+						</ul>
+					</div>
+				</div>
+			</div>
+		</div>
+		
+		
+		
+		
+		
+		<script src="https://cdn.bootcss.com/jquery/1.12.4/jquery.min.js"></script>
+  		<script src="https://cdn.bootcss.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+		<script src="https://cdn.bootcss.com/vue/2.5.16/vue.js"></script>
+		<script src="js/script.js"></script>
+	</body>
+</html>

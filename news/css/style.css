@@ -1,0 +1,167 @@
+*{
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+.clearfix:after{
+    content: "";
+    display: table;
+    clear: both;
+}
+body.news li{
+	list-style: none;
+	margin: 5px 0px;
+}
+body.news .manage{
+	z-index: 100;
+	position: fixed;
+	top: 20%;
+	left: 35%;
+	padding: 20px;
+	border: 1px solid black;
+	background: #fff;
+	display: none;
+}
+body.news .imgs img{
+	width: 100%;
+}
+body.news .houtai{
+	margin-top: 20px;
+	background: aqua;
+	border: none;
+	border-radius: 5px;
+	padding: 3px 5px;
+}
+body.news .xinwen h3{
+	background: #E0E0E0;
+}
+body.news .xinwen>div ul{
+	background: #fff;
+}
+body.news .password{
+	display: block;
+}
+body.news ul li{
+	display: none;
+}
+body.news .zhuangtai{
+	display: block;
+}
+
+
+
+/*后台样式*/
+body.admin .bbg{
+	width: 100%;
+	margin-bottom: 50px;
+}
+body.admin ul{
+	border: 1px solid black;
+}
+body.admin li{
+	list-style: none;
+	padding: 5px;
+	border: 1px solid #ededed;
+}
+body.admin .add,body.admin .ads{
+	display: none;
+	z-index: 100;
+	position: fixed;
+	top: 20%;
+	left: 36%;
+	width: 30%;
+	display: none;
+	background: #fff;
+}
+body.admin .add .addTitle,body.admin .ads .addTitle{
+	background: black;
+	padding: 20px;
+	color: #fff;
+}
+body.admin .add .addTitle button,body.admin .ads .addTitle button{
+	background: none;
+	border: none;
+	outline: none;
+	cursor: pointer;
+	color: #fff;
+}
+body.admin .add .addText,body.admin .ads .addText{
+	padding: 20px;
+}
+body.admin .add .text,body.admin .ads .text{
+	margin-top: 30px;
+}
+body.admin .add .text textarea,body.admin .ads .text textarea{
+	margin-left: 84px;
+	margin-top: -35px;
+}
+body.admin .add .addBtn,body.admin .ads .addBtn{
+	margin-top: 10px;
+}
+body.admin .fabu{
+	background: #E0E0E0;
+	border-radius: 5px;
+	padding: 3px 5px;
+	margin-right: 10px;
+}
+body.admin .bianji{
+	margin-right: 10px;
+	background: darkgreen;
+	border: none;
+	border-radius: 5px;
+	padding: 3px 5px;
+}
+body.admin .bu{
+	margin-right: 10px;
+	background: yellow;
+	border: none;
+	border-radius: 5px;
+	padding: 3px 5px;
+}
+body.admin .shan{
+	margin-right: 10px;
+	background: red;
+	border: none;
+	border-radius: 5px;
+	padding: 3px 5px;
+}
+body.admin .zuozhe{
+	margin-right: 30px;
+	width: 10%;
+	text-align: left;
+}
+body.admin .zhuangtai{
+	background: green;
+}
+body.admin .qiantai{
+	background: cornflowerblue;
+	border: none;
+	border-radius: 5px;
+	padding: 3px 5px;
+	margin-bottom: 20px;
+}
+body.admin .clue{
+	z-index: 100;
+	position: fixed;
+	top: 30%;
+	left: 30%;
+	width: 30%;
+	padding: 20px;
+	border: 1px solid black;
+	background: #fff !important;
+	display: none;
+}
+body.admin .clue button:nth-of-type(2){
+	background: red;
+	color: #fff;
+	border: none;
+	border-radius: 5px;
+	padding: 3px 5px;
+	margin-right: 20px;
+}
+body.admin .clue button:nth-of-type(1){
+	background: green;
+	border: none;
+	border-radius: 5px;
+	padding: 3px 5px;
+}
